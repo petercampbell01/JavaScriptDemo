@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 1 || Peter Campbell</title>
+	<link rel="stylesheet" href="stylesheets/stylesheet.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="src/SuperLoop.js"></script>
+	<script src="src/Result.js"></script>
+	<script src="src/Square.js"></script>
+	<script src="src/Modulus7.js"></script>
+	<script src="src/Controller.js"></script>
+
+</head>
+<body>
+<header>
+	<h1>BCPR280 Assignment 1</h1>
+</header>
+<main>
+		<div id="menu">
+		</div>
+		<div id = "content">
+			<h2>Question 1</h2>
+			<div id ="app1">
+				<button type="button" onclick = "changeVisApp1()"> Show Answer</button> 
+				<span v-if="isSeen">{{message}} </span>
+			</div>		
+		
+		<h2>Question 2</h2>			
+		<div id="app2">
+			<button type="button" onclick = "changeVisApp2()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+		
+		<h2>Question 3</h2>			
+		<div id="app3">
+			<button type="button" onclick = "changeVisApp3()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+
+		<h2>Question 4</h2>			
+		<div id="app4">
+			<button type="button" onclick = "changeVisApp4()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+
+		<h2>Question 5</h2>			
+		<div id="app5">
+			<button type="button" onclick = "changeVisApp5()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+
+		<h2>Question 6</h2>			
+		<div id="app6">
+			<button type="button" onclick = "changeVisApp6()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+
+		<h2>Question 7</h2>			
+		<div id="app7">
+			<button type="button" onclick = "changeVisApp7()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+
+
+		<h2>Question 8</h2>
+		<div id ="app8">
+			<button type="button" onclick = "changeVisApp8()"> Show Answer</button>
+			<span v-if="isSeen">{{message}} </span>
+		</div>		
+		
+		<h2>Question 9</h2>			
+		<div id="app9">
+			<button type="button" onclick = "changeVisApp9()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+		
+		<h2>Question 10</h2>			
+		<div id="app10">
+			<button type="button" onclick = "changeVisApp10()"> Show Answer</button>	
+			<span v-if="isSeen">{{message}} </span>
+		</div>
+		
+		
+	</div>
+</main>
+
+<script>
+'use strict'
+var app1 = new Vue({
+	el: '#app1',
+	data:{	
+		message: q1(),
+		isSeen: false
+	}
+})
+
+var app2 = new Vue({
+	el: '#app2',
+	data: {
+		message: q2(),
+		isSeen: false	
+	}
+})
+
+var app3 = new Vue({
+	el: '#app3',
+	data: {
+		message: q3(),
+		isSeen: false	
+	}
+})
+
+var app4 = new Vue({
+	el: '#app4',
+	data: {
+		message: q4(),
+		isSeen: false	
+	}
+})
+
+var app5 = new Vue({
+	el: '#app5',
+	data: {
+		message: q5(),
+		isSeen: false	
+	}
+})
+
+var app6 = new Vue({
+	el: '#app6',
+	data: {
+		message: q6(),
+		isSeen: false	
+	}
+})
+
+var app7 = new Vue({
+	el: '#app7',
+	data: {
+		message: q7(),
+		isSeen: false	
+	}
+})
+
+var app8 = new Vue({
+	el: '#app8',
+	data:{	
+		message: q8(),
+		isSeen: false
+	}
+})
+
+var app9 = new Vue({
+	el: '#app9',
+	data: {
+		message: q9(),
+		isSeen: false	
+	}
+
+})
+
+var app10 = new Vue({
+	el: '#app10',
+	data: {
+		message: q10(),
+		isSeen: false
+			
+	}
+})
+</script>
+</body>
+</html>

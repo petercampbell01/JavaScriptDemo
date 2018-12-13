@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tester for Assignment 1 || Peter Campbell</title>
+	<script src="src/SuperLoop.js"></script>
+	<script src="src/Result.js"></script>
+	<script src="src/Square.js"></script>
+	<script src="src/Modulus7.js"></script>
+	<script src="src/Controller.js"></script>
+
+</head>
+<style>
+*{box-sizing: box;}
+body{font-family: tahoma, sans-serif;}
+#test{width: 30em;	height: 2em;	display: flex;	padding: 2em;}
+#passed{	background-color: #1c6319;	color: white;}
+#failed{	background-color: red;	color: white;}
+#output{ padding-left: 2em;padding-bottom: 2em;}
+</style>
+<body>
+<header>
+	<h1>BCPR280 Assignment 1 Tester</h1>
+</header>
+<main>
+<p id="results"> </p>
+	<div id="test">
+		<div id="passed">  </div>
+		<div id="failed">  </div>
+	</div>
+	
+<div id="output">
+
+All test outputs sent to developer's console</p>
+</div>
+</main>
+</body>
+</html>
+
+
+<script>
+var passed = 0
+var tested = 0
+var output =''
+
+//Test 1
+function testQ1LoopResult1to10(){
+	tested ++
+	let loopTester = new SuperLoop(1, 10)
+	let expected = new Result(55,5.5)
+	let actual = loopTester.doForLoop()	
+	output += '<br>Test 1: Question 1'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+function testQ1LoopResult1to100(){
+	tested ++
+	let loopTester = new SuperLoop()
+	let expected = new Result(5050,50.5)
+	let actual = loopTester.doForLoop()	
+	output += '<br>Test 2: Question 1'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+function testQ2LoopResult1to3(){
+	tested ++
+	let loopTester = new SuperLoop(1, 3)
+	let expected = new Result(6,2)
+	let actual = loopTester.doWhile()	
+	output += '<br>Test 3: Question 2'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ2LoopResult1to100(){
+	tested ++
+	let loopTester = new SuperLoop()
+	let expected = new Result(5050,50.5)
+	let actual = loopTester.doWhile()	
+	output += '<br>Test 4: Question 2'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ3LoopResult1to3(){
+	tested ++
+	let loopTester = new SuperLoop(1, 3)
+	let expected = new Result(6,2)
+	let actual = loopTester.doDoWhile()	
+	output += '<br>Test 5: Question 3'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ3LoopResult1to100(){
+	tested ++
+	let loopTester = new SuperLoop()
+	let expected = new Result(5050,50.5)
+	let actual = loopTester.doDoWhile()	
+	output += '<br>Test 6: Question 3'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ4LoopResult1to3(){
+	tested ++
+	let loopTester = new SuperLoop(1, 3)
+	let expected = new Result(6,2)
+	let actual = loopTester.forInLoop()	
+	output += '<br>Test 7: Question 4'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ4LoopResult1to100(){
+	tested ++
+	let loopTester = new SuperLoop()
+	let expected = new Result(5050,50.5)
+	let actual = loopTester.forInLoop()	
+	output += '<br>Test 8: Question 4'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ5LoopResult1to3(){
+	tested ++
+	let loopTester = new SuperLoop(1, 3)
+	let expected = new Result(6,2)
+	let actual = loopTester.forOfLoop()	
+	output += '<br>Test 9: Question 5'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ5LoopResult1to100(){
+	tested ++
+	let loopTester = new SuperLoop()
+	let expected = new Result(5050,50.5)
+	let actual = loopTester.forOfLoop()	
+	output += '<br>Test 10: Question 5'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+//Testing function logic. If it can perform this test correctly, 
+//it can perform real task correctly.
+function testQ6(){
+	tested ++
+	let loopTester = new SuperLoop(10, 15)
+	let expected = new Result(75,12.5,6)
+	let actual = loopTester.forOfLoop()	
+	output += '<br>Test 11: Question 6'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average && expected.count === actual.count){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ7(){
+	tested ++
+	let loopTester = new SuperLoop(1, 10)
+	let expected = new Result(25,5,5)
+	let actual = loopTester.oddLoop()	
+	output += '<br>Test 12: Question 7'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average && expected.count === actual.count){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+function testQ8(){
+	tested ++
+	let loopTester = new Modulus7(1, 14)
+	let expected = new Result(21,1.5)
+	let actual = loopTester.doForLoop()	
+	output += '<br>Test 13: Question 8'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+function testQ9(){
+	tested ++
+	let loopTester = new Square(1, 3)
+	let expected = new Result(14,4.666666666666667)
+	let actual = loopTester.doForLoop()	
+	output += '<br>Test 14: Question 9'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average	
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		passed ++	
+		output += '<br>Test Passed'
+	} 
+	else{
+		output += '<br>Test failed'	
+	}	
+	output+= '<br>'
+} 
+
+function testQ10(){
+	tested ++
+	let loopTester = new Square(10, 15)
+	let expected = new Result(955,159.16666666666666)
+	let actual = loopTester.doForLoop()	
+	output += '<br>Test 15: Question 10'	
+	output += '<br>Expected: Sum: ' + expected.sum + ', average: '+ expected.average
+	output += '<br>Actual: Sum: ' + actual.sum + ', average: '+ actual.average
+	if(expected.sum === actual.sum && expected.average === actual.average){
+		output += '<br>Test Passed'
+		passed ++	
+	} 
+	else{
+	
+		output += '<br>Test failed'	
+	}
+	output+= '<br>'
+} 
+
+
+
+function testResults(){
+	if(passed === tested){	
+		output += '<br>All tests passed'
+	}
+	else{
+		output += '<br>' + passed + '/' + tested +' passed'	
+	}
+	let passedPercent = (passed / tested) * 100
+	let failedPercent = 100 - passedPercent
+	let passedStr = passedPercent +'%'
+	let failedStr = failedPercent +'%'
+	let testOutput = "Testing Peter Campbell's Assignment...<br>" + passed + '/' + tested +' tests passed.' 
+	 document.getElementById("results").innerHTML = testOutput
+	 document.getElementById("passed").style.width = passedStr
+	 document.getElementById("failed").style.width = failedStr
+	 document.getElementById("output").innerHTML = output
+	 
+}
+
+
+function controller(){
+	testQ1LoopResult1to10()
+	testQ1LoopResult1to100()
+	testQ2LoopResult1to3()
+	testQ2LoopResult1to100()
+	testQ3LoopResult1to3()
+	testQ3LoopResult1to100()
+	testQ4LoopResult1to3()
+	testQ4LoopResult1to100()
+	testQ5LoopResult1to3()
+	testQ5LoopResult1to100()
+	testQ6()
+	testQ7()
+	testQ8()
+	testQ9()
+	testQ10()
+	
+	
+	testResults()
+}
+
+
+window.onload = controller
+</script>

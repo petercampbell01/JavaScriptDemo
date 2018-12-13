@@ -1,0 +1,39 @@
+*{
+	box-sizing: box;
+}
+html{
+	background-color: #d8d8d8;
+	background-image: linear-gradient(to bottom, #dce6f7, #335793)
+
+}
+body{
+	font-family:  sans-serif;
+	max-width: 52rem;
+	min-width: 34rem;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow:  5px 5px 5px 5px #383736;
+
+}
+header{
+	background-color: #335793;
+	padding: 1em;
+	color: white;
+}
+main{
+	display: flex;
+}
+#menu{
+	width: 00%;
+	background-color: #384fff;
+}
+
+#content{
+	width: 100%;
+	background-color: white;
+	padding:  1em 2em;
+}
+h2{
+	font-size: 1em;
+	font-family: tahoma, verdana, sans-serif;
+}
